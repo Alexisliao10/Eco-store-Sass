@@ -1,0 +1,23 @@
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+
+$primary-color: #ffefe7;
+$secondary-color: #ffdac6;
+$tertiary-color: #babd8d;
+$primary-text-color: #7c6a0a;
+$font-stackl: "IBM Plex sans", sans-serif;
+
+nav {
+  width: 100%;
+  height: 300px;
+}
+
+main {
+  background-color: $primary-color;
+}
+
+footer {
+  $background: #fa9500;
+  background-color: $background;
+  width: 100%;
+  height: 250px;
+}
