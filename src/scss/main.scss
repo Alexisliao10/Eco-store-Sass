@@ -1,4 +1,10 @@
-@import "../../node_modules/bootstrap/scss/bootstrap-reboot.scss";
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+//optional
+@import "../../node_modules/bootstrap/scss/reboot";
 
 $primary-color: #ffefe7;
 $secondary-color: #ffdac6;
@@ -12,6 +18,10 @@ a {
   &:hover {
     cursor: pointer;
   }
+}
+
+h1 {
+  font-size: 3.5rem;
 }
 
 .tooltip {
@@ -34,6 +44,9 @@ li {
 }
 
 .main-body {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 55px;
   background-color: $primary-color;
   font-family: $font-stack;
 
@@ -50,7 +63,6 @@ li {
 
 .logo {
   p {
-    margin-inline-start: 40px;
     font-size: 24px;
     color: $primary-text-color;
   }
@@ -64,7 +76,7 @@ li {
     height: auto;
 
     li:last-child {
-      margin-right: 40px;
+      margin-right: -10px;
     }
   }
   &__item {
@@ -78,5 +90,57 @@ li {
     &:hover .tooltip {
       visibility: visible;
     }
+  }
+}
+
+.landing {
+  color: $primary-text-color;
+
+  article {
+    display: flex;
+    margin-top: 75px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.landing-info {
+  width: 50%;
+  margin: 35px 20px 0 0;
+
+  &__title {
+    position: relative;
+    margin-bottom: 55px;
+  }
+
+  &__description {
+    padding-right: 30px;
+    font-size: large;
+    line-height: 1.8rem;
+  }
+
+  &__btn {
+    display: inline-block;
+    border: none;
+    margin-top: 20px;
+    border-radius: 35px;
+    width: 150px;
+    height: 50px;
+    background-color: #fa9500;
+    font-size: medium;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.landing-aside {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 50%;
+  &__img {
+    border-radius: 35px;
+    width: 435px;
+    height: 500px;
   }
 }
