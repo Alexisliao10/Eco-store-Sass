@@ -259,16 +259,17 @@ label {
   display: inline-block;
 }
 
-button {
+button, .product__card .product__actions svg {
   border-radius: 0;
 }
 
-button:focus:not(:focus-visible) {
+button:focus:not(:focus-visible), .product__card .product__actions svg:focus:not(:focus-visible) {
   outline: 0;
 }
 
 input,
 button,
+.product__card .product__actions svg,
 select,
 optgroup,
 textarea {
@@ -278,7 +279,7 @@ textarea {
   line-height: inherit;
 }
 
-button,
+button, .product__card .product__actions svg,
 select {
   text-transform: none;
 }
@@ -298,13 +299,13 @@ select:disabled {
   display: none !important;
 }
 
-button,
+button, .product__card .product__actions svg,
 [type=button],
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
 }
-button:not(:disabled),
+button:not(:disabled), .product__card .product__actions svg:not(:disabled),
 [type=button]:not(:disabled),
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled) {
@@ -405,6 +406,14 @@ progress {
   display: none !important;
 }
 
+@keyframes push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 a {
   text-decoration: none;
 }
@@ -414,6 +423,10 @@ a:hover {
 
 h1 {
   font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 .tooltip {
@@ -483,8 +496,9 @@ li {
   color: #7c6a0a;
 }
 .landing article {
+  position: relative;
   display: flex;
-  margin-top: 75px;
+  margin: 75px 0;
   width: 100%;
   height: auto;
 }
@@ -515,6 +529,16 @@ li {
   text-decoration: none;
   color: white;
 }
+.landing-info__btn:hover {
+  background-color: #ec7a2f;
+  cursor: pointer;
+}
+.landing-info__btn:active {
+  animation-name: push;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
 
 .landing-aside {
   display: flex;
@@ -525,6 +549,67 @@ li {
   border-radius: 35px;
   width: 435px;
   height: 500px;
+}
+
+.product {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  height: auto;
+}
+.product__healthcare {
+  margin-bottom: 50px;
+  padding-top: 30px;
+}
+.product__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, 500px);
+  gap: 38px 50px;
+  justify-items: center;
+}
+.product__card {
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border: 0px solid rgb(100, 100, 100);
+  border-radius: 8px;
+  width: 275px;
+  height: 450px;
+  padding: 50px 38px;
+  background-color: #ffdac6;
+}
+.product__card .product__actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+}
+.product__card .product__actions button, .product__card .product__actions svg {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+}
+.product__card img {
+  width: 100%;
+  height: 260px;
+}
+.product__card figcaption {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+  width: 100%;
+  height: auto;
+  font-size: x-large;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.product__copy {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
