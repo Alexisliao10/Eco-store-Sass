@@ -557,7 +557,7 @@ li {
   width: 100%;
   height: auto;
 }
-.product__healthcare {
+.product__healthcare, .product__furniture {
   margin-bottom: 50px;
   padding-top: 30px;
 }
@@ -569,10 +569,10 @@ li {
   justify-items: center;
 }
 .product__card {
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border: 0px solid rgb(100, 100, 100);
   border-radius: 8px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   width: 275px;
   height: 450px;
   padding: 50px 38px;
@@ -580,8 +580,8 @@ li {
 }
 .product__card .product__actions {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   width: 36px;
   height: 36px;
 }
@@ -593,6 +593,9 @@ li {
   border: none;
 }
 .product__card img {
+  border: 0px solid rgb(100, 100, 100);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   width: 100%;
   height: 260px;
 }
@@ -610,6 +613,42 @@ li {
   margin-top: 4px;
   font-size: 0.85rem;
   text-align: center;
+}
+.product__card--second {
+  background-color: #babd8d;
+  color: white;
+}
+.product__actions--second path {
+  stroke: white;
+}
+
+.info {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  height: auto;
+}
+.info__why-us {
+  flex-wrap: wrap;
+  row-gap: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0;
+}
+.info__title {
+  display: block;
+}
+.info__figure {
+  display: flex;
+  width: 500px;
+  height: auto;
+  gap: 15px;
+}
+.info__copy {
+  font-size: x-large;
+  text-align: center;
+  color: #e86424;
 }
 
 /*# sourceMappingURL=main.css.map */

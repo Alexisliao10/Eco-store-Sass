@@ -20,6 +20,11 @@
   height: auto;
 }
 
+@mixin border {
+  border: 0px solid rgba(100, 100, 100, 1);
+  border-radius: 8px;
+}
+
 $primary-color: #ffefe7;
 $secondary-color: #ffdac6;
 $tertiary-color: #babd8d;
@@ -202,10 +207,9 @@ li {
   }
 
   &__card {
+    @include border();
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    border: 0px solid rgba(100, 100, 100, 1);
-    border-radius: 8px;
     width: 275px;
     height: 450px;
     padding: 50px 38px;
@@ -213,8 +217,8 @@ li {
 
     .product__actions {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 8px;
+      right: 8px;
       width: 36px;
       height: 36px;
 
@@ -232,6 +236,8 @@ li {
     }
 
     img {
+      @include border();
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
       width: 100%;
       height: 260px;
     }
@@ -251,5 +257,50 @@ li {
     margin-top: 4px;
     font-size: 0.85rem;
     text-align: center;
+  }
+
+  &__furniture {
+    @extend .product__healthcare;
+  }
+
+  &__card--second {
+    background-color: $tertiary-color;
+    color: white;
+  }
+
+  &__actions--second {
+    path {
+      stroke: white;
+    }
+  }
+}
+
+.info {
+  @include section-container();
+
+  &__why-us {
+    flex-wrap: wrap;
+    row-gap: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px 0;
+  }
+
+  &__title {
+    display: block;
+  }
+
+  &__figure {
+    display: flex;
+    width: 500px;
+    height: auto;
+    gap: 15px;
+  }
+
+  &__copy {
+    font-size: x-large;
+    text-align: center;
+    color: $secondary-text-color;
   }
 }
