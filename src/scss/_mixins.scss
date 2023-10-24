@@ -1,0 +1,18 @@
+@mixin animation($type: push, $duration: 0.2s) {
+  animation-name: $type;
+  animation-duration: $duration;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@mixin section-container {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  height: auto;
+}
+
+@mixin border {
+  border: 0px solid rgba(100, 100, 100, 1);
+  border-radius: 8px;
+}

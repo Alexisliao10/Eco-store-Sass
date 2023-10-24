@@ -3,38 +3,11 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
+@import "./mixins";
+@import "./variables";
+
 //optional
 @import "../../node_modules/bootstrap/scss/reboot";
-
-@mixin animation($type: push, $duration: 0.2s) {
-  animation-name: $type;
-  animation-duration: $duration;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-}
-
-@mixin section-container {
-  position: relative;
-  margin-top: 60px;
-  width: 100%;
-  height: auto;
-}
-
-@mixin border {
-  border: 0px solid rgba(100, 100, 100, 1);
-  border-radius: 8px;
-}
-
-$primary-color: #ffefe7;
-$secondary-color: #ffdac6;
-$tertiary-color: #babd8d;
-$quartenary-color: #fa9500;
-$primary-text-color: #7c6a0a;
-$secondary-text-color: #e86424;
-$font-stack: "IBM Plex sans", sans-serif;
-$f-light: 400;
-$f-normal: 500;
-$f-bold: 700;
 
 @keyframes push {
   50% {
@@ -60,6 +33,10 @@ $f-bold: 700;
   }
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   text-decoration: none;
 
@@ -73,6 +50,10 @@ h1 {
 }
 h2 {
   font-size: 2rem;
+}
+
+input {
+  display: none;
 }
 
 .tooltip {
@@ -139,6 +120,58 @@ li {
     height: 45px;
     &:hover .tooltip {
       visibility: visible;
+    }
+  }
+}
+
+.ham-menu {
+  position: relative;
+  display: none;
+  label {
+    display: block;
+    cursor: pointer;
+    background-color: none;
+  }
+
+  &__collapsed {
+    display: block;
+  }
+  &__expanded {
+    display: none;
+  }
+
+  ul {
+    position: absolute;
+    top: 40px;
+    right: 55px;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      max-height: 0;
+      overflow: hidden;
+      width: 20vw;
+      height: 35px;
+      font-size: larger;
+      text-align: end;
+      line-height: 35px;
+      color: $secondary-text-color;
+      z-index: 1;
+    }
+  }
+
+  input:checked ~ label {
+    .ham-menu__collapsed {
+      display: none;
+    }
+    .ham-menu__expanded {
+      display: block;
+    }
+  }
+
+  input:checked ~ ul {
+    li {
+      max-height: 100%;
     }
   }
 }
@@ -239,16 +272,22 @@ li {
       width: 36px;
       height: 36px;
 
-      button {
+      label {
         width: 100%;
         height: 100%;
-
         padding: 0;
+        cursor: pointer;
         background: none;
         border: none;
       }
       svg {
-        @extend button;
+        @extend label;
+      }
+
+      input:checked ~ label {
+        svg {
+          fill: #fcb0bf;
+        }
       }
     }
 
@@ -283,6 +322,14 @@ li {
   &__card--second {
     background-color: $tertiary-color;
     color: white;
+
+    .product__actions--second {
+      input:checked + label {
+        svg {
+          fill: white;
+        }
+      }
+    }
   }
 
   &__actions--second {
@@ -304,15 +351,15 @@ li {
     margin: 120px 0;
   }
 
-  &__title {
-    display: block;
-  }
-
   &__figure {
     display: flex;
     width: 500px;
     height: auto;
     gap: 15px;
+
+    img {
+      object-fit: contain;
+    }
   }
 
   &__copy {
@@ -326,7 +373,7 @@ li {
 
     display: flex;
     flex-wrap: wrap;
-    column-gap: 35px;
+    gap: 35px;
     justify-content: center;
     align-items: center;
   }
@@ -344,7 +391,7 @@ li {
       height: 100%;
     }
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
   }
 }
@@ -416,6 +463,203 @@ li {
       width: 30px;
       height: 30px;
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: xx-large;
+    font-weight: $f-normal;
+    line-height: 36px;
+  }
+  h2 {
+    font-size: x-large;
+    font-weight: $f-light;
+  }
+  .main-body__header {
+    padding: 25px 35px 27px 25px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .logo {
+    font-size: 20px;
+    text-wrap: nowrap;
+  }
+
+  .landing {
+    padding: 0 27px;
+  }
+
+  .navbar {
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      display: none;
+    }
+  }
+
+  .ham-menu {
+    display: block;
+  }
+
+  .landing {
+    padding: 0 27px;
+    article {
+      flex-direction: column-reverse;
+      margin: 0;
+    }
+  }
+
+  .landing-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__description {
+      padding: 0;
+      font-size: medium;
+      line-height: 24px;
+    }
+
+    &__btn {
+      align-self: center;
+    }
+  }
+
+  .landing-aside {
+    width: 100%;
+
+    &__img {
+      border-radius: 12px;
+      height: 380px;
+      object-fit: cover;
+    }
+  }
+
+  .product {
+    margin-top: 30px;
+
+    &__container {
+      display: flex;
+      gap: 40px;
+      width: auto;
+      height: 50vh;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+    }
+
+    &__card {
+      scroll-snap-align: start;
+      transition: all 0.2s;
+      width: 260px;
+      height: 380px;
+      padding: 40px 30px;
+      border-radius: 12px;
+
+      .product__actions {
+        width: 28px;
+        height: 28px;
+      }
+
+      img {
+        width: 192px;
+        height: 230px;
+        object-fit: cover;
+      }
+
+      figcaption {
+        justify-content: start;
+        margin-top: 10px;
+        font-size: large;
+      }
+    }
+
+    &__copy {
+      display: -webkit-box;
+      font-size: small;
+      text-align: start;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .info {
+    &__why-us {
+      flex-direction: column;
+      row-gap: 50px;
+      margin: 80px;
+    }
+
+    &__figure {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &__copy {
+      font-size: large;
+    }
+
+    &__img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .location {
+    &__map {
+      img {
+        object-fit: cover;
+        height: 500px;
+      }
+    }
+
+    &__legend {
+      margin-top: 17px;
+      margin-bottom: 70px;
+    }
+
+    &__subtitle {
+      font-size: large;
+    }
+
+    &__address {
+      font-size: small;
+    }
+  }
+
+  .footer {
+    padding: 20px 27px;
+
+    ul {
+      margin-top: 15px;
+    }
+
+    &__social-media {
+      justify-content: start;
+      margin: 20px 0;
+      img {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }

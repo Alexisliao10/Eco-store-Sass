@@ -14,11 +14,38 @@
 <body class="main-body">
     <header class="main-body__header" id="logo-header">
         <div class="logo">
-            <a href="" class="Logo__link">
-                <p>Eco-store</p>
+            <a href="#" class="Logo__link">
+                <p>Eco-Store</p>
             </a>
         </div>
         <nav class="navbar">
+            <div class="ham-menu">
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <svg class="ham-menu__collapsed" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="menu">
+                            <path id="Vector"
+                                d="M5.33325 24H26.6666M5.33325 8H26.6666H5.33325ZM5.33325 16H26.6666H5.33325Z"
+                                stroke="#7C6A0A" stroke-width="2.66667" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                    <svg class="ham-menu__expanded" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g id="x">
+                            <path id="Vector" fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.29303 4.29302C4.48056 4.10555 4.73487 4.00023 5.00003 4.00023C5.26519 4.00023 5.5195 4.10555 5.70703 4.29302L10 8.58602L14.293 4.29302C14.3853 4.19751 14.4956 4.12133 14.6176 4.06892C14.7396 4.01651 14.8709 3.98892 15.0036 3.98777C15.1364 3.98662 15.2681 4.01192 15.391 4.0622C15.5139 4.11248 15.6255 4.18673 15.7194 4.28062C15.8133 4.37452 15.8876 4.48617 15.9379 4.60907C15.9881 4.73196 16.0134 4.86364 16.0123 4.99642C16.0111 5.1292 15.9835 5.26042 15.9311 5.38242C15.8787 5.50443 15.8025 5.61477 15.707 5.70702L11.414 10L15.707 14.293C15.8892 14.4816 15.99 14.7342 15.9877 14.9964C15.9854 15.2586 15.8803 15.5094 15.6948 15.6948C15.5094 15.8802 15.2586 15.9854 14.9964 15.9877C14.7342 15.99 14.4816 15.8892 14.293 15.707L10 11.414L5.70703 15.707C5.51843 15.8892 5.26583 15.99 5.00363 15.9877C4.74143 15.9854 4.49062 15.8802 4.30521 15.6948C4.1198 15.5094 4.01463 15.2586 4.01236 14.9964C4.01008 14.7342 4.11087 14.4816 4.29303 14.293L8.58603 10L4.29303 5.70702C4.10556 5.51949 4.00024 5.26518 4.00024 5.00002C4.00024 4.73486 4.10556 4.48055 4.29303 4.29302Z"
+                                fill="#3F3F46" />
+                        </g>
+                    </svg>
+                </label>
+                <ul>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Favorite</a></li>
+                    <li><a href="">Cart</a></li>
+                </ul>
+            </div>
             <ul>
                 <li class="navbar__item">
                     <a href="" class="navbar__link">
@@ -76,14 +103,16 @@
             <div class="product__container">
                 <div class="product__card">
                     <div class="product__actions">
-                        <button>
+                        <input type="checkbox" id="like-icon-1">
+                        <label for="like-icon-1">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/products/toothbrush.jpg" alt="toothbrush">
@@ -95,14 +124,16 @@
                 </div>
                 <div class="product__card">
                     <div class="product__actions">
-                        <button>
+                        <input type="checkbox" id="like-icon-2">
+                        <label for="like-icon-2">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/products/hand-cream.jpeg" alt="hand cream">
@@ -114,12 +145,16 @@
                 </div>
                 <div class="product__card">
                     <div class="product__actions">
-                        <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <input type="checkbox" id="like-icon-3">
+                        <label for="like-icon-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></button>
+                            </svg>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/products/serum.jpg" alt="serum hidratante">
@@ -131,30 +166,38 @@
                 </div>
                 <div class="product__card">
                     <div class="product__actions">
-                        <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <input type="checkbox" id="like-icon-4">
+                        <label for="like-icon-4">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></button>
+                            </svg>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/products/organic-kit.jpg" alt="kit de viaje">
                         <figcaption>Kit de viaje</figcaption>
                         <div class="product__copy">
-                            <p>Incluye peine y cepillo de bambúm, jabón orgánico de eucalipto y shampoo tamaño de viaje.
+                            <p>Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño de viaje.
                             </p>
                         </div>
                     </figure>
                 </div>
                 <div class="product__card">
                     <div class="product__actions">
-                        <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <input type="checkbox" id="like-icon-5">
+                        <label for="like-icon-5">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></button>
+                            </svg>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/products/organic-soap.jpg" alt="jabón orgánico">
@@ -166,12 +209,16 @@
                 </div>
                 <div class="product__card">
                     <div class="product__actions">
-                        <button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <input type="checkbox" id="like-icon-6">
+                        <label for="like-icon-6">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg></button>
+                            </svg>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/products/guasha-kit.jpg" alt="skincare">
@@ -188,14 +235,16 @@
             <div class="product__container">
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-7">
+                        <label for="like-icon-7">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/wood-chair.jpg" alt="silla de bambú">
@@ -207,14 +256,16 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-8">
+                        <label for="like-icon-8">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/mini-table.jpg" alt="mesa pequeña">
@@ -226,14 +277,16 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-9">
+                        <label for="like-icon-9">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/stand-table.jpg" alt="buró">
@@ -245,14 +298,16 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-10">
+                        <label for="like-icon-10">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/mueble.jpg" alt="Cajonera">
@@ -265,14 +320,18 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-11">
+                        <label for="like-icon-11">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+
+                        </label>
+
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/mirror.jpg" alt="espejo de pared">
@@ -284,14 +343,16 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-12">
+                        <label for="like-icon-12">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/desk-lamp.jpg" alt="lampara de bambú">
@@ -303,14 +364,18 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-13">
+                        <label for="like-icon-13">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+
+                        </label>
+
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/stand.jpg" alt="Mesita decorativa">
@@ -322,14 +387,16 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-14">
+                        <label for="like-icon-14">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/mini-table.jpg" alt="Mesa de desayuno">
@@ -341,14 +408,16 @@
                 </div>
                 <div class="product__card product__card--second">
                     <div class="product__actions product__actions--second">
-                        <button>
+                        <input type="checkbox" id="like-icon-15">
+                        <label for="like-icon-15">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M3.34255 7.7779C3.5687 7.23194 3.90017 6.73586 4.31804 6.31799C4.7359 5.90012 5.23198 5.56865 5.77795 5.3425C6.32392 5.11635 6.90909 4.99995 7.50004 4.99995C8.09099 4.99995 8.67616 5.11635 9.22213 5.3425C9.7681 5.56865 10.2642 5.90012 10.682 6.31799L12 7.63599L13.318 6.31799C14.162 5.47407 15.3066 4.99997 16.5 4.99997C17.6935 4.99997 18.8381 5.47407 19.682 6.31799C20.526 7.16191 21.0001 8.30651 21.0001 9.49999C21.0001 10.6935 20.526 11.8381 19.682 12.682L12 20.364L4.31804 12.682C3.90017 12.2641 3.5687 11.7681 3.34255 11.2221C3.1164 10.6761 3 10.0909 3 9.49999C3 8.90904 3.1164 8.32387 3.34255 7.7779Z"
                                     stroke="#FCB0BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </button>
+                        </label>
+                        </input>
                     </div>
                     <figure>
                         <img src="../src/assets/img/furniture/table.jpg" alt="Mesa decorativa">
@@ -399,10 +468,9 @@
                 </div>
             </div>
         </section>
-
     </main>
     <footer class="footer">
-        <h3 class="footer__title"><a href="#logo-header">Eco-Store</a></h3>
+        <h3 class="footer__title"><a href="#">Eco-Store</a></h3>
         <ul>
             <li class="footer__item">careers</li>
             <li class="footer__item">careers</li>
