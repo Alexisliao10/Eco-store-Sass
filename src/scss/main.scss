@@ -223,7 +223,9 @@ li {
       background-color: #ec7a2f;
       cursor: pointer;
     }
+  }
 
+  &__btn--isActive {
     &:active {
       @include animation(push);
     }

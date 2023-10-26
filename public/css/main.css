@@ -595,7 +595,7 @@ li {
   background-color: #ec7a2f;
   cursor: pointer;
 }
-.landing-info__btn:active {
+.landing-info__btn--isActive:active {
   animation-name: push;
   animation-duration: 0.2s;
   animation-timing-function: linear;
